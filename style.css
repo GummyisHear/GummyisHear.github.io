@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "karton";
+    src: url(fonts/Cardboard\ Cat\ Extra\ Bold.ttf) format('truetype');
+    font-weight: bold;
+}
+
+#Sc0{ line-height: 0vh;}
+
+#gamecontainer #afterButtons h1{font-size:10vh; flex-wrap: nowrap;}
+/* ▲ ▲ ▲ относится к шрифтам*/
+
+
+/* ▼ ▼ ▼ относится к игровому процессу*/
+#gamecontainer, canvas, #myfilter, #pausfilter, #shopfilter {
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#gamecontainer {
+	background-image: url('img/box_photos/P11201-230950.jpg');
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+body #gamecontainer #myrestartbutton{
+    display: block;
+} 
+
+/* ▼ ▼ ▼ относится к магазину*/
+#shopSc {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#shopSc p, body #gamecontainer #shopSc #iksBtn {
+    width: 100%;
+    height: 100%;
+    margin-left: 30%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container {
+    width: fit-content;
+    height: fit-content;
+}
+body .container .w3-col {
+    flex-wrap:nowrap; 
+    display:inline-block
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  display: inline block;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+/* ▼ относится ко всему body*/
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('img/box_photos/boxPhoto_big.jpg');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /*display: block;*/ /* Должна выполнять строки 32&33: "overflow-..." */ 
+}
+
+/* ▼ относится ко всем h1*/
+h1 {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: uppercase;
+    font-family: 'karton', sans-serif;
+    font-size: 5vh;
+    line-height: 1em;
+    background: url('img/cardboard.png') repeat center center;
+    -webkit-text-fill-color: transparent;
+    background-attachment:fixed;
+    background-size: auto;
+    -webkit-background-clip: text;
+    background-clip:text; 
+    -moz-background-clip:text;
+    -webkit-text-stroke: 0.1vh #000;
+    cursor: pointer;
+}
+
+/* ▼ относится к классу dev*/
+.dev {
+    font-family: 'karton', sans-serif;
+    line-height: 10vh;
+    font-size: 5vh;
+    -webkit-text-stroke: 0.1vh #fff;
+}
+
+h1:hover{
+    -webkit-text-stroke: 0.5vh #000;
+}
+
+h1#sndOnOff:hover{
+    -webkit-text-stroke: 0.1vh #000;
+    cursor:default;
+}
